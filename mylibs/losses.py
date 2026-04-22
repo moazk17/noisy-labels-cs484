@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader, TensorDataset
 
 
 class SymmetricCrossEntropy(nn.Module):
-    """Symmetric Cross-Entropy loss (Wang et al., ICCV 2019).
+    """Symmetric Cross-Entropy loss (Wang et al., 2019).
 
     L_SCE = alpha * CE(p, q) + beta * CE(q, p)
 
@@ -43,7 +43,7 @@ class SymmetricCrossEntropy(nn.Module):
 
 
 class ForwardCorrectionLoss(nn.Module):
-    """Forward loss correction (Patrini et al., CVPR 2017).
+    """Forward loss correction (Patrini et al., 2017).
 
     Given an estimated noise transition matrix T where T_ij = P(y_noisy=j | y_true=i),
     the corrected prediction is: p_corrected = T^T @ softmax(logits).
